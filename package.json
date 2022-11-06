@@ -2,14 +2,13 @@
   "name": "CDN",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compress": "node ./compress.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bat-sharp": "^1.0.4"
+    "bat-sharp": "^1.0.5"
   }
 }
