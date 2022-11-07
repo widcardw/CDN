@@ -1,7 +1,7 @@
-const { batSharp } = require('bat-sharp')
+import { batSharp } from 'bat-sharp'
 
 batSharp({
-  inputArr: ['./**/*.png'],
+  inputArr: ['./assets/**/*.webp'],
   format: 'webp', // png jpeg webp avif and so on
   outputPath: './compressed',
   outputConfig: { // docs: https://sharp.pixelplumbing.com/api-output#png

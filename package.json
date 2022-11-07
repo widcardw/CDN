@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "compress": "node ./compress.js",
+    "compress": "esno ./compress.ts",
     "site": "esno ./sitemap.ts"
   },
   "keywords": [],

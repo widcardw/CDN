@@ -18,7 +18,7 @@ const MEDIA_SUFFIX = [
 ]
 
 async function getAllMedia() {
-    const fileList = await fg(MEDIA_SUFFIX.map(s => `./**/*${s}`), { ignore: ['node_modules/**', ] })
+    const fileList = await fg(MEDIA_SUFFIX.map(s => `./**/*${s}`), { ignore: ['node_modules/**', 'manim/avatar/**'] })
     return fileList
 }
 
@@ -50,7 +50,7 @@ let html = ''
 
 function treeToHtml(tree: FileTree) {
     if (tree.children.length === 0) {
-        html += `<li><a href="${stack.join('/') + '/' + tree.name}">${tree.name}</a></li>`
+        html += `<li><a href="${(stack.join('/') + '/' + encodeURIComponent(tree.name))}">${tree.name}</a></li>`
         return
     }
 
