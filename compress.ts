@@ -1,9 +1,16 @@
 import { batSharp } from 'bat-sharp'
 
+const path = './to_be_compressed/**/*.'
+const suffix = [
+  'jpg',
+  'jpeg',
+  'png'
+]
+
 batSharp({
-  inputArr: ['./source/**/*.jpg'],
+  inputArr: suffix.map(s => path + s),
   format: 'webp', // png jpeg webp avif and so on
-  outputPath: './compressed',
+  outputPath: './pics_compressed',
   outputConfig: { // docs: https://sharp.pixelplumbing.com/api-output#png
     quality: 60,
   },
