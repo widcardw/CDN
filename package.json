@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "bat-sharp": "^1.0.5",
+    "bat-sharp": "^1.0.6",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12"
   }

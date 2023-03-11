@@ -2,13 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.11.9
-  bat-sharp: ^1.0.5
+  bat-sharp: ^1.0.6
   esno: ^0.16.3
   fast-glob: ^3.2.12
 
 devDependencies:
   '@types/node': 18.11.9
-  bat-sharp: 1.0.5
+  bat-sharp: 1.0.6
   esno: 0.16.3
   fast-glob: 3.2.12
 
@@ -82,8 +82,8 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: true
 
-  /bat-sharp/1.0.5:
-    resolution: {integrity: sha512-Z9snrEwS0Llql9r8BofVCfCeHQ6rnlp9nfdIs/nhmZjcolbxE70A7rXpPbe9CFMbclc4LYjz7Ha4ICvkXZjzIw==}
+  /bat-sharp/1.0.6:
+    resolution: {integrity: sha512-gU5fORZBRKgG4OJSldFmTCiIAv/Nbu8ayOAFQ/+NOFp/nKkWmLfzAMXj4KJpcQyLhqc5hdtb/OYvRY2TwqMUpw==}
     dependencies:
       fast-glob: 3.2.12
       sharp: 0.30.7
