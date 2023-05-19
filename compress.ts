@@ -9,9 +9,9 @@ const suffix = [
 
 batSharp({
   inputArr: suffix.map(s => path + s),
-  format: 'webp', // png jpeg webp avif and so on
+  format: 'png', // png jpeg webp avif and so on
   outputPath: './pics_compressed',
   outputConfig: { // docs: https://sharp.pixelplumbing.com/api-output#png
-    quality: 90,
+    quality: 60,
   },
 })
