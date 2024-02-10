@@ -5,6 +5,8 @@ from typing import List
 
 url_prefix = 'https://cdn.widcard.win/'
 
+ignore_list = ['.DS_Store', 'index.html']
+
 it = os.walk('./manim')
 
 def insert_html_template(html: str):
@@ -23,7 +25,6 @@ def insert_html_template(html: str):
 def build_html(dirpath: str, dirnames: str, filenames: List[str]):
     file_full_url_list = []
     dir_full_url_list = []
-    breadcrumb = []
     
     this_url = os.path.join(url_prefix, dirpath).replace('\\', '/').replace('/./', '/')
     for dirname in dirnames:
@@ -46,8 +47,9 @@ def build_html(dirpath: str, dirnames: str, filenames: List[str]):
 def walk_one_path(p: str):
     for it in os.walk(p):
         dirpath, dirnames, filenames = it
-        filenames.remove('index.html')
-        build_html(dirpath, dirnames, filenames)     
+        filenames = list(filter(lambda a: not a.startswith('.') and not a in ignore_list, filenames))
+        filenames.sort()
+        build_html(dirpath, dirnames, filenames)
 
 def build_root():
     dirs = list(filter(lambda a: not a.startswith('.') and not a == 'node_modules' and not a.startswith('_'), filter(os.path.isdir, os.listdir('./'))))
